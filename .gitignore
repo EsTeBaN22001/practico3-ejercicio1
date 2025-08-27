@@ -1,6 +1,5 @@
 
 nbproject/private/ 
-nbproject/project.properties 
 nbproject/build-impl.xml 
 
 *.class
@@ -17,3 +16,5 @@ nbproject/build-impl.xml
 
 hs_err_pid
 replay_pid*
+/build/
+/dist/
