@@ -1,10 +1,7 @@
 
 import javax.swing.JOptionPane;
-
 // TODA ESTA CLASES LAS HICE AL PEDO PORQUE ME RE CONFUNDI DE CONSIGNA XD
 public class ValidarClase{
-    
-    
     public static boolean validarUsuario(String usuario){
         // TODO LO RELACIONADO A LA VALIDACION DE EL USUARIO
         if (usuario == null || usuario.trim().isEmpty()) {
@@ -18,9 +15,6 @@ public class ValidarClase{
         return true;
         // TODO LO RELACIONADO A LA VALIDACION DE EL USUARIO
         }
-    
-
-    
     public static boolean validarContraseña(String contraseña) {
         // TODO LO RELACIONADO A LA VALIDACION DE LA CONTRA
         if (contraseña == null || contraseña.isEmpty()) {
@@ -46,8 +40,6 @@ public class ValidarClase{
         return true; 
         // TODO LO RELACIONADO A LA VALIDACION DE LA CONTRA
         }
-    
 // TODA ESTA CLASES LAS HICE AL PEDO PORQUE ME RE CONFUNDI DE CONSIGNA XD
-    
     
 }

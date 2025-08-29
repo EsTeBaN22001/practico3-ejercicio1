@@ -1,8 +1,8 @@
 
 import javax.swing.JOptionPane;
         
-public class Prueba extends javax.swing.JFrame {
-    public Prueba() {
+public class InicioSession extends javax.swing.JFrame {
+    public InicioSession() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -69,15 +69,11 @@ public class Prueba extends javax.swing.JFrame {
                 .addGroup(PanelCentralInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanelCentralInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelCentralInicioLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(BotonVerificar))
-                    .addGroup(PanelCentralInicioLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelCentralInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(VariableContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(VariableUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(BotonVerificar)
+                    .addComponent(VariableContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(VariableUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         PanelCentralInicioLayout.setVerticalGroup(
@@ -187,11 +183,11 @@ public class Prueba extends javax.swing.JFrame {
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane2Layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+                .addContainerGap(33, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(PanelCentralInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -212,14 +208,6 @@ public class Prueba extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVerificarActionPerformed
-
-    }//GEN-LAST:event_BotonVerificarActionPerformed
-
-    private void VariableUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableUsuarioActionPerformed
-        // USUARIO
-    }//GEN-LAST:event_VariableUsuarioActionPerformed
-
-    private void BotonVerificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonVerificarMouseClicked
         //BOTON DE VERIFICAR
         
         // TODO ESTO ES LA VERIFICACION LO DEL USUARIO Y CONTRASEÑA 
@@ -230,15 +218,23 @@ public class Prueba extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Bienvenido "+ usuario);
             VariableContraseña.setText("");
             VariableUsuario.setText("");
+            Home home = new Home();
+            home.setVisible(true);
+            dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Usuario y contraseña incorrectos");
             VariableContraseña.setText("");
             VariableUsuario.setText("");
         }
         // TODO ESTO ES LA VERIFICACION LO DEL USUARIO Y CONTRASEÑA 
-        
-        
-        
+    }//GEN-LAST:event_BotonVerificarActionPerformed
+
+    private void VariableUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableUsuarioActionPerformed
+        // USUARIO
+    }//GEN-LAST:event_VariableUsuarioActionPerformed
+
+    private void BotonVerificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonVerificarMouseClicked
+
     }//GEN-LAST:event_BotonVerificarMouseClicked
 
     private void VariableContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableContraseñaActionPerformed
@@ -248,17 +244,18 @@ public class Prueba extends javax.swing.JFrame {
     
     //BOTON DE OCULTAR
     private void BotonOcultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonOcultarMouseClicked
-        VariableContraseña.setEchoChar('*');
+        
     }//GEN-LAST:event_BotonOcultarMouseClicked
     //BOTON DE OCULTAR    
     private void BotonOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOcultarActionPerformed
+        VariableContraseña.setEchoChar('*');
     }//GEN-LAST:event_BotonOcultarActionPerformed
     //BOTON DE VER 
     private void BotonVerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonVerMouseClicked
-        VariableContraseña.setEchoChar((char)0);
     }//GEN-LAST:event_BotonVerMouseClicked
     //BOTON DE VER 
     private void BotonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVerActionPerformed
+        VariableContraseña.setEchoChar((char)0);
     }//GEN-LAST:event_BotonVerActionPerformed
     
     //-----BOTONES DE VER Y OCULTAR-----
@@ -272,20 +269,21 @@ public class Prueba extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioSession.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioSession.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioSession.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Prueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioSession.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Prueba().setVisible(true);
+                new InicioSession().setVisible(true);
             }
         });
     }
